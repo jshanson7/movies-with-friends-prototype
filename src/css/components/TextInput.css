@@ -1,0 +1,44 @@
+@define-mixin textInputPlaceholderInner $color {
+  @mixin fsItalic;
+  @mixin fw300;
+  color: $color;
+  /* firefox */
+  opacity: 1;
+}
+
+@define-mixin textInputPlaceholder $color: $offWhite {
+  &::-webkit-input-placeholder { @mixin textInputPlaceholderInner $color; }
+  &:-moz-placeholder { @mixin textInputPlaceholderInner $color; }
+  &::-moz-placeholder { @mixin textInputPlaceholderInner $color; }
+  &:-ms-input-placeholder { @mixin textInputPlaceholderInner $color; }
+}
+
+@define-mixin TextInput $color: $offWhite {
+  transition: background-color $defaultTransitionDuration, box-shadow $defaultTransitionDuration;
+  @mixin textInputPlaceholder $color;
+  @mixin openSans;
+  @mixin fw400;
+  @mixin fs12;
+  color: $color;
+  height: $textInputHeight;
+  width: $textInputWidth;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid $color;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0);
+  $focusColor: rgba(255, 255, 255, 0.15);
+  &:hover, &:focus {
+    color: $white;
+    background-color: $focusColor;
+    box-shadow: 0 0 6px 6px $focusColor;
+  }
+}
+
+@component TextInput {
+  @mixin TextInput;
+  
+  @modifier white {
+    @mixin TextInput $white;
+  }
+}

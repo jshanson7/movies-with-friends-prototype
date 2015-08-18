@@ -1,0 +1,82 @@
+/* postcss calc() percentage isn't working with variables */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+@define-mixin flex {
+  display: flex;
+}
+
+@define-mixin centerContentVertically {
+  @mixin flex;
+  align-items: center;
+}
+
+@define-mixin centerContentHorizontally {
+  @mixin flex;
+  justify-content: center;
+}
+
+@define-mixin centerContent {
+  @mixin centerContentVertically;
+  @mixin centerContentHorizontally;
+}
+
+@define-mixin fullHeight { height: 100%; }
+@define-mixin fullWidth { width: 100%; }
+@define-mixin fullHeightWidth {
+  @mixin fullHeight;
+  @mixin fullWidth;
+}
+
+@define-mixin inlineBlock {
+  display: inline-block;
+}
+
+@define-mixin column {
+  @mixin inlineBlock;
+  vertical-align: top;
+  height: 100%;
+}
+
+@define-mixin clearMargin { margin: 0; }
+@define-mixin clearPadding { padding: 0; }
+@define-mixin clearMarginPadding {
+  @mixin clearMargin;
+  @mixin clearPadding;
+}
+
+@define-mixin unstyleList {
+  @mixin clearMarginPadding;
+  &> li { list-style: none; }
+}
+
+@define-mixin unstyleLink {
+  text-decoration: none;
+}
+
+@define-mixin borderRadius $radius {
+  border-radius: $radius;
+}
+
+@define-mixin makeCircle {
+  border-radius: 50%;
+}
+
+@define-mixin panelContent {
+  @mixin fullWidth;
+  @mixin centerContentHorizontally;
+}
+
+@define-mixin panelSectionsLayout {
+  @mixin unstyleList;
+}
+
+@define-mixin sectionHeaderLayout {
+  margin: 12px 0 14px;
+}

@@ -1,0 +1,5 @@
+@component ContentWithHeader {
+  @mixin flex;
+  flex-direction: column;
+  height: 100%;
+}

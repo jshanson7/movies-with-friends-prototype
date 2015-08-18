@@ -1,0 +1,49 @@
+@component MainContent {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  @descendent header-buttons-container {
+    @mixin flex;
+    position: absolute;
+    top: $mainContentSpacing;
+    right: $mainContentSpacing;
+    height: $contentHeaderHeight;
+    z-index: 1;
+  }
+
+  @define-mixin headerButton {
+    margin-left: 22px;
+
+    &:before {
+      @mixin makeTransition color;
+      color: $gray;
+      line-height: $contentHeaderHeight;
+      font-weight: 600;
+    }
+
+    &:hover {
+      cursor: pointer;
+      &:before {
+        color: #9099A7;
+      }
+    }
+  }
+
+  @descendent header-button-reload {
+    @mixin headerButton;
+
+    &:before {
+      font-size: 35px;
+      padding-top: 1px;
+    }
+  }
+
+  @descendent header-button-logout {
+    @mixin headerButton;
+    font-size: 23px;
+    &:before {
+      transform: rotateZ(-90deg);
+    }
+  }
+}

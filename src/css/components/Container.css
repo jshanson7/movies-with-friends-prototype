@@ -1,0 +1,21 @@
+@component Container {
+  
+  @modifier full {
+    @mixin fullHeightWidth;
+  }
+
+  @modifier full-center {
+    @mixin fullHeightWidth;
+    @mixin centerContent;
+  }
+  
+  @modifier left-panel-navigation {
+    flex-grow: 1;
+    overflow: auto;
+  }
+
+  @modifier right-panel-chat-list {
+    flex-grow: 1;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,27 @@
+@component CurrentUser {
+  @mixin flex;
+  position: relative;
+  align-items: center;
+  height: 20px;
+  width: $rightPanelContentWidth;
+
+  @descendent avatar-container {}
+
+  @descendent name {
+    font-size: 12px;
+    margin-left: $avatarSpacing;
+    color: $white;
+  }
+
+  @descendent status {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    color: $white;
+    font-size: 10px;
+    
+    &:before {
+      font-weight: 600;
+    }
+  }
+}

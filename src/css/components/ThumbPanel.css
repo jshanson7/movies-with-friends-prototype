@@ -1,0 +1,18 @@
+@define-mixin ThumbPanel $bgColor: $gray {
+  background-color: $bgColor;
+  height: $thumbPanelHeight;
+}
+
+@component ThumbPanel {
+  @mixin ThumbPanel;
+
+  @modifier red {
+    @mixin ThumbPanel $red;
+  }
+  @modifier blue {
+    @mixin ThumbPanel $blue;
+  }
+  @modifier gray {
+    @mixin ThumbPanel $gray;
+  }
+}

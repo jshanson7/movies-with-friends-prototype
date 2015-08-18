@@ -1,0 +1,25 @@
+@component SearchInput {
+  position: relative;
+  height: $textInputHeight;
+
+  @define-mixin searchIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    &:before {
+      font-weight: 600;
+      font-size: 21px;
+    }
+
+  }
+  @descendent search-icon {
+    @mixin searchIcon;
+    color: $offWhite;
+    
+    &--white {
+      @mixin searchIcon;
+      color: $white;
+    }
+  }
+
+}

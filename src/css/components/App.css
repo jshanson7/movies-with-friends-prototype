@@ -1,0 +1,33 @@
+@define-mixin appPanel $width, $bgColor {
+  @mixin flex;
+  flex-direction: column;
+  width: $width;
+  min-width: $width;
+  background-color: $bgColor;
+}
+
+@component App {
+  @mixin flex;
+  @mixin openSans;
+  @mixin fullHeightWidth;
+  min-height: $appMinHeight;
+  min-width: $appMinWidth;
+
+  @descendent panel {
+
+    &--left {
+      @mixin appPanel $leftPanelWidth, $darkGray;
+    }
+
+    &--center {
+      @mixin appPanel auto, $white;
+      flex-grow: 1;
+      min-width: 0;
+      overflow: auto;
+    }
+
+    &--right {
+      @mixin appPanel $rightPanelWidth, $lightGray1;
+    }
+  }
+}

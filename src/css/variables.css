@@ -1,0 +1,50 @@
+/* colors */
+
+$white: #ffffff;
+$offWhite: #edf0f2;
+$lightGray1: #ecedef;
+$lightGray2: #d0d6e0;
+$gray: #c4ccd8;
+$darkGray: #11171c;
+$red: #cc4d4d;
+$blue: #74c0c8;
+$darkBlue1: #3c4c55;
+$darkBlue2: #1c242b;
+$grayBlue: #798697;
+$green: #94ba52;
+$yellow: #f5b041;
+
+/* layout */
+
+$appMinHeight: 331px;
+$appMinWidth: 992px;
+$leftPanelWidth: 200px;
+$rightPanelWidth: 226px;
+$rightPanelContentWidth: 162px;
+$textInputHeight: 24px;
+$textInputWidth: 136px;
+$thumbPanelHeight: 84px;
+$navSectionsPaddingTop: 16px;
+$navSectionsWidth: 168px;
+$navPaddingLeft: 16px;
+$navOptionHeight: 38px;
+$mainContentSpacing: 32px;
+$halfMainContentSpacing: 16px;
+$contentHeaderHeight: 20px;
+$contentHeaderOuterHeight: 68px;
+$movieThumbnailHeight: 195px;
+$movieThumbnailWidth: 130px;
+$movieListItemHeight: 254px;
+$movieListItemOuterWidth: 162px;
+$movieListRowHeight: 286px;
+$avatarSpacing: 10px;
+
+/* transitions */
+
+$defaultTransitionDuration: 0.3s;
+$defaultTransitionTiming: linear;
+$defaultTransitionDelay: 0s;
+
+/* utility */
+
+$percent100: 100%;

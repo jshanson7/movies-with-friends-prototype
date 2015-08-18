@@ -1,0 +1,17 @@
+@define-mixin avatarThumbnailCommon {
+  @mixin makeCircle;
+}
+
+@component AvatarThumbnail {
+  @mixin avatarThumbnailCommon;
+  height: 27px;
+  width: 27px;
+  background-color: $grayBlue;
+
+  @modifier small {
+    @mixin avatarThumbnailCommon;
+    height: 20px;
+    width: 20px;
+    background-color: $gray;
+  }
+}

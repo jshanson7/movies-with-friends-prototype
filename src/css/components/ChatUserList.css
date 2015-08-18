@@ -1,0 +1,9 @@
+@component ChatUserList {
+  @mixin unstyleList;
+  width: $rightPanelContentWidth;
+  padding-top: $navSectionsPaddingTop;
+
+  @descendent item {
+    margin-bottom: 22px;
+  }
+}

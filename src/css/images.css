@@ -1,0 +1,4 @@
+@define-mixin filterImage $value {
+  filter: $value;
+  -webkit-filter: $value;
+}

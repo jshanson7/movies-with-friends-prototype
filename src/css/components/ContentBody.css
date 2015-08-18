@@ -1,0 +1,11 @@
+@define-mixin contentBodyStyles {
+  overflow: hidden;
+  height: calc($percent100 - $contentHeaderOuterHeight);
+}
+@component ContentBody {
+  @mixin contentBodyStyles;
+
+  @modifier padded {
+    padding: $halfMainContentSpacing $mainContentSpacing $mainContentSpacing $mainContentSpacing;
+  }
+}

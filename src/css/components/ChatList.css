@@ -1,0 +1,17 @@
+@component ChatList {
+  @mixin panelContent;
+
+  @descendent sections {
+    @mixin panelSectionsLayout;
+    width: $rightPanelContentWidth;
+    padding-top: $navSectionsPaddingTop;
+  }
+
+  @descendent section-header {
+    @mixin clearMarginPadding;
+    @mixin sectionHeaderType;
+    @mixin sectionHeaderLayout;
+    margin-bottom: 9px;
+  }
+
+}

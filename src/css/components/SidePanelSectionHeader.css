@@ -1,0 +1,9 @@
+@component SidePanelSectionHeader {
+  @mixin clearMarginPadding;
+  margin: 14px 0;
+  padding-left: $navPaddingLeft;
+  color: $darkBlue1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}

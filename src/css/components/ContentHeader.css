@@ -1,0 +1,77 @@
+@component ContentHeader {
+  z-index: 1;
+  background-color: $white;
+  width: 100%;
+  padding: $mainContentSpacing $mainContentSpacing $halfMainContentSpacing $mainContentSpacing;
+  @mixin flex;
+  flex-wrap: nowrap;
+  height: $contentHeaderOuterHeight;
+
+  @descendent header-text-container {
+    @mixin flex;
+    justify-content: flex-start;
+    float: left;
+    position: absolute;
+  }
+
+  @descendent header-text {
+    @mixin clearMarginPadding;
+    color: $darkGray;
+    line-height: 20px;
+    font-size: 27px;
+    font-weight: 300;
+  }
+
+  @descendent header-nav-container {
+    @mixin flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  @descendent header-nav {
+    @mixin unstyleList;
+  }
+
+  @descendent header-nav-option {
+    position: relative;
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 21px;
+      &:before {
+        position: absolute;
+        right: 0;
+        margin-right: -11px;
+        content: '';
+        display: block;
+        background-color: $lightGray1;
+        width: 1.5px;
+        height: 100%;
+      }
+    }
+  }
+
+  @define-mixin headerNavOptionLink {
+    @mixin makeTransition color;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: $lightGray2;
+    text-decoration: none;
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @descendent header-nav-option-link {
+    @mixin headerNavOptionLink;
+
+    &:hover {
+      color: $blue;
+    }
+    &--selected {
+      @mixin headerNavOptionLink;
+      color: $blue;
+    }
+  }
+}

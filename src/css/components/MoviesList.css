@@ -1,0 +1,64 @@
+@component MoviesList {
+  /* @mixin unstyleList; */
+  @mixin flex;
+  flex-grow: 1;
+  height: 100%;
+  position: relative;
+  padding-left: $halfMainContentSpacing;
+  padding-right: $halfMainContentSpacing;
+
+  @descendent viewport {
+    width: 100%;
+  }
+  
+  @descendent row {
+    @mixin flex;
+    width: 100%;
+    justify-content: center;
+    height: $movieListRowHeight;
+  }
+
+  @descendent item {
+    @mixin transitionBackgroundAndShadow;
+    height: $movieListItemHeight;
+    width: $movieThumbnailWidth;
+    margin: $halfMainContentSpacing;
+
+    /* background-color: rgba(204, 77, 77, 0);
+    box-shadow: 0 0 6px 16px rgba(204, 77, 77, 0);
+    &:hover, &:focus {
+      background-color: rgba(204, 77, 77, 0.15);
+      box-shadow: 0 0 12px 16px rgba(204, 77, 77, 0.15);
+    } */
+  }
+
+  @descendent movie-details {
+    margin-top: $halfMainContentSpacing;
+  }
+
+  @descendent movie-title {
+    @mixin clearMarginPadding;
+    @mixin ellipsize;
+    color: $darkBlue1;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 1px;
+  }
+
+  @define-mixin movieSubDetails {
+    @mixin ellipsize;
+    font-size: 12px;
+    line-height: 13.5px;
+    color: $grayBlue;
+  }
+
+  @descendent movie-genres {
+    @mixin movieSubDetails;
+    margin-bottom: 2px;
+  }
+
+  @descendent movie-runtime {
+    @mixin movieSubDetails;
+  }
+}

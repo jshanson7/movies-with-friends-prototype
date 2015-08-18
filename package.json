@@ -1,0 +1,48 @@
+{
+  "name": "movies-with-friends",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node --harmony devServer",
+    "build": "NODE_ENV=production node --harmony node_modules/.bin/webpack",
+    "lint": "node --harmony node_modules/.bin/eslint -c .eslintrc src"
+  },
+  "author": "Jeff Hanson",
+  "license": "MIT",
+  "dependencies": {
+    "flux": "^2.0.3",
+    "jsonp-promise": "^0.1.2",
+    "lodash": "^3.10.1",
+    "normalize.css": "^3.0.3",
+    "react": "^0.13.3",
+    "react-infinite": "^0.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "babel-core": "^5.8.22",
+    "babel-eslint": "^4.0.5",
+    "babel-loader": "^5.3.2",
+    "babel-runtime": "^5.8.20",
+    "css-loader": "^0.16.0",
+    "cssnext-loader": "^1.0.1",
+    "csswring": "^3.0.5",
+    "eslint": "^1.1.0",
+    "eslint-loader": "^1.0.0",
+    "eslint-plugin-react": "^3.2.2",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "json-loader": "^0.5.2",
+    "postcss-bem": "https://github.com/jshanson7/postcss-bem/tarball/c1b15db0147873ab1875392e3f620dca24b39691",
+    "postcss-loader": "^0.5.1",
+    "postcss-mixins": "^0.4.0",
+    "postcss-nested": "^0.3.2",
+    "postcss-simple-vars": "^0.3.0",
+    "react-hot-loader": "^1.2.8",
+    "source-map-loader": "^0.1.5",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.11.0",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "engines": {
+    "node": ">=0.12.4"
+  }
+}

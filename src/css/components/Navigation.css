@@ -1,0 +1,46 @@
+@component Navigation {
+  @mixin panelContent;
+
+  @descendent sections {
+    @mixin panelSectionsLayout;
+    width: $navSectionsWidth;
+    padding-top: $navSectionsPaddingTop;
+  }
+
+  @descendent section-header {
+    @mixin clearMarginPadding;
+    @mixin sectionHeaderType;
+    @mixin sectionHeaderLayout;
+    padding-left: $navPaddingLeft;
+  }
+
+  @descendent options {
+    @mixin unstyleList;
+  }
+
+  @define-mixin navigationOption {
+    @mixin makeTransition background-color;
+    @mixin borderRadius 4px;
+    height: $navOptionHeight;
+    &:hover, &--selected {
+      background-color: $darkBlue2;
+    }
+  }
+
+  @descendent option {
+    @mixin navigationOption;
+
+    &--selected {
+      @mixin navigationOption;
+    }
+  }
+
+  @descendent option-link {
+    @mixin fullHeightWidth;
+    @mixin centerContentVertically;
+    @mixin unstyleLink;
+    @mixin fs12;
+    text-indent: $navPaddingLeft;
+    color: $white;
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Victor Erixon",
+    "watching": "The Great Gatsby",
+    "status": "active",
+    "thumbnail": ""
+  },
+  {
+    "name": "Gustav Butlex",
+    "watching": "Wolverine",
+    "status": "idle",
+    "thumbnail": ""
+  },
+  {
+    "name": "Malte Jansson",
+    "watching": "Smurfs",
+    "status": "idle",
+    "thumbnail": ""
+  },
+  {
+    "name": "August Berglund",
+    "watching": "Californication",
+    "status": "active",
+    "thumbnail": ""
+  },
+  {
+    "name": "Alicia Agneson",
+    "watching": "Swan Lake",
+    "status": "busy",
+    "thumbnail": ""
+  },
+  {
+    "name": "Bill S Kenney",
+    "watching": "Jobs",
+    "status": "away",
+    "thumbnail": ""
+  },
+  {
+    "name": "Charlie Waite",
+    "watching": "The Great Gatsby",
+    "status": "away",
+    "thumbnail": ""
+  },
+  {
+    "name": "Justin Pervorse",
+    "watching": "Pacific Rim",
+    "status": "away",
+    "thumbnail": ""
+  },
+  {
+    "name": "Trent Walton",
+    "watching": "Planes",
+    "status": "away",
+    "thumbnail": ""
+  },
+  {
+    "name": "Rogie King",
+    "watching": "2 Guns",
+    "status": "away",
+    "thumbnail": ""
+  }
+]
