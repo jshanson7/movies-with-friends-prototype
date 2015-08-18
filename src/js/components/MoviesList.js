@@ -46,7 +46,7 @@ export default class MoviesResults extends Component {
   render() {
     const movies = this.props.movies;
     const moviesPerRow = this.state.moviesPerRow;
-    const numberOfRows = Math.floor(movies.length / moviesPerRow);
+    const numberOfRows = Math.ceil(movies.length / moviesPerRow);
 
     return <div className='MoviesList' {...this.props}>
       <Infinite className='MoviesList__viewport' containerHeight={this.state.viewportHeight} elementHeight={MOVIE_ROW_HEIGHT}>{
