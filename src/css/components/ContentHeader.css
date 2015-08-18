@@ -55,7 +55,6 @@
     @mixin makeTransition color;
     font-size: 11.5px;
     font-weight: 600;
-    color: $lightGray2;
     text-decoration: none;
     
     &:hover {
@@ -65,6 +64,7 @@
 
   @descendent header-nav-option-link {
     @mixin headerNavOptionLink;
+    color: $lightGray2;
 
     &:hover {
       color: $blue;
