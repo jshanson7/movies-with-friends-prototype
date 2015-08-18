@@ -18,8 +18,7 @@ let _moviesList = map(demoMoviesList.results, movie => {
     // api doesn't have runtimes
     runtime: randomInt(75, 150),
     thumbnail: BASE_POSTER_URL + movie.poster_path
-  })
-  return movie;
+  });
 });
 
 let _currentResults = _moviesList.slice(0);
