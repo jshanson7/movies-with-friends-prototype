@@ -1,7 +1,6 @@
 import { map, range } from 'lodash';
 import React, { Component } from 'react';
 import Infinite from 'react-infinite';
-import { PLAYING } from '../constants/MainNavOptions';
 
 const MOVIE_OUTER_WIDTH = 162;
 const MOVIE_ROW_HEIGHT = 286;
