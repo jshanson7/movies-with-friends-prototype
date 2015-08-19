@@ -4,7 +4,7 @@
   height: $movieThumbnailHeight;
   width: $movieThumbnailWidth;
   background-color: $darkGray;
-  border-radius: 5px;
+  border-radius: $movieThumbnailBorderRadius;
   overflow: hidden;
   &:hover {
     cursor: pointer;
@@ -22,6 +22,7 @@
   @descendent poster {
     @mixin fullHeightWidth;
     @mixin filterImage opacity(100%);
+    border-radius: $movieThumbnailBorderRadius;
 
     transition: filter $defaultTransitionDuration;
     transition: -webkit-filter $defaultTransitionDuration;

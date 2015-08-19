@@ -38,6 +38,7 @@ $movieListItemHeight: 254px;
 $movieListItemOuterWidth: 162px;
 $movieListRowHeight: 286px;
 $avatarSpacing: 10px;
+$movieThumbnailBorderRadius: 5px;
 
 /* transitions */
 
