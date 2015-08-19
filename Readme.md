@@ -4,6 +4,7 @@ Demo: [http://d2s83e7s7303bc.cloudfront.net/](http://d2s83e7s7303bc.cloudfront.n
 
 ![Movie Service UI](https://d13yacurqjgara.cloudfront.net/users/96387/screenshots/1168219/attachments/152522/Video.png)
 Source: [https://dribbble.com/shots/1168219-2-Movie-Service-UI](https://dribbble.com/shots/1168219-2-Movie-Service-UI)
+Design credit: [Victor Erixon](https://dribbble.com/shots/1168219-2-Movie-Service-UI)
 
 ## Usage
 
