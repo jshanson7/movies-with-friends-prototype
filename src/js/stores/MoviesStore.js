@@ -12,14 +12,12 @@ const POSTER_WIDTH = 300;
 const BASE_POSTER_URL = 'http://image.tmdb.org/t/p/w' + POSTER_WIDTH;
 
 // patch demo api response
-let _moviesList = map(demoMoviesList.results, movie => {
-  return assign({}, movie, {
-    genres: map(movie.genre_ids, genreId => findWhere(demoMoviesGenres.genres, { id: genreId}).name),
-    // api doesn't have runtimes
-    runtime: randomInt(75, 150),
-    thumbnail: BASE_POSTER_URL + movie.poster_path
-  });
-});
+let _moviesList = map(demoMoviesList.results, movie => assign({}, movie, {
+  genres: map(movie.genre_ids, genreId => findWhere(demoMoviesGenres.genres, { id: genreId}).name),
+  // api doesn't have runtimes
+  runtime: randomInt(75, 150),
+  thumbnail: BASE_POSTER_URL + movie.poster_path
+}));
 
 let _currentResults = _moviesList.slice(0);
 let _currentSortBy = POPULARITY;
