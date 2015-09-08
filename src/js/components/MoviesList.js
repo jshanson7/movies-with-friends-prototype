@@ -12,7 +12,7 @@ function getMoviesPerRowForWidth(width) {
     moviesPerRow : 1;
 }
 
-export default class MoviesResults extends Component {
+export default class MoviesList extends Component {
   state = {
     moviesPerRow: 5,
     viewportHeight: 800
