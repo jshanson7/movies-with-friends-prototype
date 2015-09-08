@@ -28,24 +28,14 @@ function changeSortBy(id) {
 }
 
 function sortResults() {
-  let sortByProp = null;
   switch (_currentSortBy) {
     case RELEASE_DATE:
-      sortByProp = 'release_date';
+      _currentResults = sortByOrder(_moviesList, movie => new Date(movie['release_date']).getTime(), 'desc');
       break;
     case POPULARITY:
-      sortByProp = 'popularity';
+      _currentResults = sortByOrder(_moviesList, movie => movie['popularity'], 'desc');
       break;
   }
-
-  _currentResults = sortByProp ?
-    sortByOrder(_moviesList.slice(0), movie => {
-      const sortByVal = movie[sortByProp];
-      return _currentSortBy === RELEASE_DATE ?
-        new Date(sortByVal).getTime() :
-        sortByVal
-    }, 'desc') :
-    _currentResults;
 }
 
 const MoviesStore = makeEventedStore({
